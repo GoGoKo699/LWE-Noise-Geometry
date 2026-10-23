@@ -42,7 +42,7 @@ raw emitted copies, including discarded measurement outcomes. The calculation wo
 
 ### Exact fragility under independent local dephasing
 
-For $`\Lambda_{p_j}=(1-p_j)\operatorname{Id}+p_j\Delta_j`$ acting on entire input field registers, both graph channels satisfy
+For $`\Lambda_{p_j}=(1-p_j)\mathrm{Id}+p_j\Delta_j`$ acting on entire input field registers, both graph channels satisfy
 
 ```math
 \left(\bigotimes_j\Lambda_{p_j}\right)\circ\mathcal D_\nu
@@ -58,11 +58,18 @@ The source then lies at trace distance exactly $`\eta(1-1/q)`$ from an ordinary 
 | Goal | Route |
 |---|---|
 | Understand the scientific story | [Science guide](science/README.md) → [model and theorem](science/model.md) → [interpretation](science/interpretation.md) |
+| Build the foundations and follow the result | [Learning guide](learning/README.md) → [30 milestones](learning/MILESTONES.md) with the [Watrous bridge](learning/WATROUS_BRIDGE.md) |
 | Check the separation | [channel proofs](science/channels.md) → [LWE reduction](science/hardness.md) → [cubic learner](science/learning.md) |
 | Assess physical assumptions | [source access](science/model.md#access-contract) → [implementation and perturbations](science/implementation.md) |
 | Compare with earlier work | [related work](references/RELATED_WORK.md) and [BibTeX bibliography](references/references.bib) |
 | Reproduce finite checks | [verification guide](verification/README.md) |
 | Navigate with an LLM | [llms.txt](llms.txt) |
+
+## Learning route
+
+The single educational anchor is John Watrous's *The Theory of Quantum Information* (2018). The [bridge](learning/WATROUS_BRIDGE.md) selects the relevant sections, translates the book's channel notation into this project's finite-field source model, and works through a complete small cubic-recovery example.
+
+The [30-milestone map](learning/MILESTONES.md) follows the project's logical dependencies. M01–M14 build the background and end by assembling the source model; M15–M30 develop the matched channel pair, the exact LWE reduction, the cubic learner, and the physical limits, ending in a synthesis of the full separation. The scientific proofs remain in their authoritative topic pages under [`science/`](science/README.md).
 
 ## Reproduce the finite checks
 

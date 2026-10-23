@@ -10,7 +10,7 @@ For a prime $`q`$, an error distribution $`\chi`$ on $`\mathbb F_q`$, and a fixe
 
 ```math
 (x,c),\qquad
-x\sim\operatorname{Unif}(\mathbb F_q^r),\qquad
+x\sim\mathrm{Unif}(\mathbb F_q^r),\qquad
 c=x\cdot u+e,\qquad e\sim\chi.
 ```
 
@@ -162,8 +162,8 @@ Knowledge of the fixed record subspace is not a hidden source of hardness. Fouri
 
 ```math
 u_{\mathrm{out}}=-ks-z,
-\qquad k\sim\operatorname{Unif}(\mathbb F_q),
-\qquad z\sim\operatorname{Unif}(W).
+\qquad k\sim\mathrm{Unif}(\mathbb F_q),
+\qquad z\sim\mathrm{Unif}(W).
 ```
 
 Conditioning on $`k\ne0`$, the normalized vector $`w=-u_{\mathrm{out}}/k`$ is uniform on the affine subspace $`s+W`$. After one such vector $`w_0`$, differences of subsequent vectors from $`w_0`$ are independent uniform samples from $`W`$, conditional on $`w_0`$.

@@ -12,6 +12,9 @@ This repository develops an explicit comparison of correlated phase-noise channe
 - science/learning.md: positive-Fourier readout, cubic regression, fixed raw-copy bound, and fixed unknown coefficients.
 - science/implementation.md: source and readout circuits, resource costs, accuracy budgets, independent-dephasing identity, and n-LWE simulator.
 - science/interpretation.md: information versus computation, Holevo counterexamples, source conversions, and physical meaning.
+- learning/README.md: learner-independent reading route and connection between the book, milestones, and scientific account.
+- learning/MILESTONES.md: exactly 30 stable milestones, with M01–M14 for background/preliminaries and M15–M30 for narrative/innovation; each phase ends in synthesis.
+- learning/WATROUS_BRIDGE.md: the single educational anchor, Watrous's The Theory of Quantum Information (2018), with verified sections, notation translation, locally supplied LWE steps, and a complete small example.
 - references/RELATED_WORK.md: attribution, precise source-model comparisons, version notes, and unresolved full-text coverage.
 - references/references.bib: structured primary bibliography.
 - verification/README.md: commands, coverage, expected results, and limits.
@@ -22,7 +25,7 @@ This repository develops an explicit comparison of correlated phase-noise channe
 
 Scientific story: model -> interpretation -> channels.
 Theorem audit: model -> channels -> hardness -> learning -> implementation.
-Study foundations: model definitions and access contract -> channel representations -> Fourier relation -> exact LWE simulator.
+Study: learning/README.md -> learning/MILESTONES.md in dependency order, using learning/WATROUS_BRIDGE.md for selected Watrous sections and notation -> linked science pages for authoritative claims and proofs.
 Reproduction: verification/README.md -> verify.py -> expected_results.json -> the corresponding scientific proof.
 Literature comparison: references/RELATED_WORK.md before making any priority statement.
 
@@ -42,3 +45,5 @@ Literature comparison: references/RELATED_WORK.md before making any priority sta
 12. Finite checks are not proofs of general parameters, LWE hardness, novelty, or experimental feasibility.
 
 Keep scientific claims in their topic pages, with one authoritative proof. Preserve access limits and primary attribution when summarizing. Do not infer a new attack on deployed lattice-based cryptography from the coherent-source theorem.
+
+Watrous is the educational anchor, not a source for the project's LWE separation. Research papers in references/ supply the imported scientific ingredients. Milestone identifiers describe the common scientific route and do not record a reader's progress or mastery.

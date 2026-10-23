@@ -54,7 +54,7 @@ Let $`\Delta_T`$ denote complete computational-basis dephasing on the input site
 For either $`\nu_L`$ or $`\nu_C`$, and every proper subset $`T\subsetneq[n]`$,
 
 ```math
-\nu_T=\operatorname{Unif}(\mathbb F_q^{|T|}).
+\nu_T=\mathrm{Unif}(\mathbb F_q^{|T|}).
 ```
 
 **Proof.** It suffices to check marginals on $`n-1`$ coordinates. Omitting the last coordinate leaves the independent uniform variables $`x_1,\ldots,x_r`$. If coordinate $`x_j`$ is omitted, any specification of all remaining coordinates has exactly one completion. For $`L`$ it is determined by a linear equation. For $`C`$ it is determined by
@@ -72,20 +72,20 @@ More generally, the same argument applies to graphs $`z_n=c+\sum_j f_j(x_j)`$ wh
 For either channel, every $`T\subsetneq[n]`$, every reference system $`R`$, and every joint operator $`X_{AR}`$,
 
 ```math
-\operatorname{Tr}_{A\setminus T}
- \bigl[(\mathcal D_\nu\otimes\operatorname{id}_R)(X_{AR})\bigr]
+\mathrm{Tr}_{A\setminus T}
+ \bigl[(\mathcal D_\nu\otimes\mathrm{id}_R)(X_{AR})\bigr]
  =
-(\Delta_T\otimes\operatorname{id}_R)
- \bigl(\operatorname{Tr}_{A\setminus T}X_{AR}\bigr).
+(\Delta_T\otimes\mathrm{id}_R)
+ \bigl(\mathrm{Tr}_{A\setminus T}X_{AR}\bigr).
 ```
 
 **Proof.** The phase unitary is a tensor product. Unitary invariance of the partial trace on the discarded sites gives
 
 ```math
-\operatorname{Tr}_{A\setminus T}(Z_zX_{AR}Z_z^\dagger)
+\mathrm{Tr}_{A\setminus T}(Z_zX_{AR}Z_z^\dagger)
  =
 Z_{z_T}
- \bigl(\operatorname{Tr}_{A\setminus T}X_{AR}\bigr)
+ \bigl(\mathrm{Tr}_{A\setminus T}X_{AR}\bigr)
 Z_{z_T}^\dagger.
 ```
 
@@ -98,11 +98,11 @@ This is an equality of reduced processes for arbitrary global inputs, not merely
 For every proper input subset $`T`$, keeping the entire output register $`B`$,
 
 ```math
-\operatorname{Tr}_{A\setminus T}\rho_s^{\nu_L}
+\mathrm{Tr}_{A\setminus T}\rho_s^{\nu_L}
  =
-\operatorname{Tr}_{A\setminus T}\rho_s^{\nu_C}
+\mathrm{Tr}_{A\setminus T}\rho_s^{\nu_C}
  =
-\operatorname{Tr}_{A\setminus T}\rho_s^{\mathrm{cl}},
+\mathrm{Tr}_{A\setminus T}\rho_s^{\mathrm{cl}},
 ```
 
 where
@@ -140,7 +140,7 @@ The vectors
 form an orthonormal basis, since $`\langle\phi_w|\phi_z\rangle=d^{-1}\sum_a\omega^{(z-w)\cdot a}=\mathbf1_{z=w}`$. Thus the eigenvalues of $`\tau_\nu`$ are exactly $`\nu(z)`$, including zeros. Unitary conjugation in the source definition gives the eigenvalues
 
 ```math
-\operatorname{spec}(\rho_s^\nu)
+\mathrm{spec}(\rho_s^\nu)
  =\{\nu(z)\chi(e):z\in\mathbb F_q^n,\ e\in\mathbb F_q\}.
 ```
 
@@ -170,9 +170,9 @@ For the two uniform graph laws, the complete source spectra match: every nonzero
 
 ```math
 \begin{aligned}
-\operatorname{rank}(\rho_s^\nu)
-  &=q^r|\operatorname{supp}\chi|,\\
-\operatorname{Tr}\bigl[(\rho_s^\nu)^2\bigr]
+\mathrm{rank}(\rho_s^\nu)
+  &=q^r|\mathrm{supp}\,\chi|,\\
+\mathrm{Tr}\bigl[(\rho_s^\nu)^2\bigr]
   &=q^{-r}\sum_e\chi(e)^2,\\
 S(\rho_s^\nu)
   &=r\log_2q+H(\chi),\\
@@ -202,7 +202,7 @@ For an input with uniform computational diagonal, including the present source i
 
 Its entropy is $`H(\nu)`$. For the graph laws this is $`r\log_2q`$, whereas the surviving source coherence is $`\log_2q`$. These are different quantities.
 
-The minimal environment dimension of the channel is its Kraus rank. As the next section shows, that rank is $`|\operatorname{supp}\nu|`$, giving the same minimal dimension $`q^r`$ for both channels. The bath implementation in [implementation.md](implementation.md#2-pairwise-bath-realization) attains it with $`r`$ bath qudits.
+The minimal environment dimension of the channel is its Kraus rank. As the next section shows, that rank is $`|\mathrm{supp}\,\nu|`$, giving the same minimal dimension $`q^r`$ for both channels. The bath implementation in [implementation.md](implementation.md#2-pairwise-bath-realization) attains it with $`r`$ bath qudits.
 
 ## 4. Choi spectra and scalar channel metrics
 
@@ -211,7 +211,7 @@ Use the normalized maximally entangled state
 ```math
 |\Phi_d\rangle=d^{-1/2}\sum_a|a\rangle|a\rangle,
 \qquad
-J_\nu=(\mathcal D_\nu\otimes\operatorname{id})
+J_\nu=(\mathcal D_\nu\otimes\mathrm{id})
        (|\Phi_d\rangle\langle\Phi_d|).
 ```
 
@@ -223,7 +223,7 @@ J_\nu=\sum_z\nu(z)|\Phi_z\rangle\langle\Phi_z|,
 |\Phi_z\rangle=(Z_z\otimes I)|\Phi_d\rangle.
 ```
 
-The states $`|\Phi_z\rangle`$ are orthonormal because $`d^{-1}\operatorname{Tr}(Z_w^\dagger Z_z)=\mathbf1_{w=z}`$. Thus $`J_\nu`$ has nonzero spectrum $`\nu`$ and rank $`|\operatorname{supp}\nu|`$. For both graph laws its spectrum is uniform on $`q^r`$ eigenvalues.
+The states $`|\Phi_z\rangle`$ are orthonormal because $`d^{-1}\mathrm{Tr}(Z_w^\dagger Z_z)=\mathbf1_{w=z}`$. Thus $`J_\nu`$ has nonzero spectrum $`\nu`$ and rank $`|\mathrm{supp}\,\nu|`$. For both graph laws its spectrum is uniform on $`q^r`$ eigenvalues.
 
 ### Entanglement and average gate fidelity
 
@@ -238,7 +238,7 @@ F_e(I/d,\mathcal D_\nu)
 The average gate fidelity relative to the identity is
 
 ```math
-F_{\mathrm{avg}}(\mathcal D_\nu,\operatorname{id})
+F_{\mathrm{avg}}(\mathcal D_\nu,\mathrm{id})
  =\frac{d\,\nu(0)+1}{d+1}.
 ```
 
@@ -357,7 +357,7 @@ For any two phase distributions on this common family of unitaries,
 ```math
 \frac12\|\mathcal D_\nu-\mathcal D_\mu\|_\diamond
  =\frac12\sum_z|\nu(z)-\mu(z)|
- =\operatorname{TV}(\nu,\mu).
+ =\mathrm{TV}(\nu,\mu).
 ```
 
 The triangle inequality gives the upper bound, because every unitary channel has diamond norm one. Sending $`|+\rangle`$ through the difference gives a mixture of the orthogonal states $`|\phi_z\rangle`$, attaining the lower bound. An entangled input is unnecessary.
@@ -387,7 +387,7 @@ For $`L`$, the Fourier multiplier is
 \widehat\nu_L(\delta)=\mathbf1_{\delta\in L^\perp},
 \qquad
 L^\perp
- =\operatorname{span}\{(-1,\ldots,-1,1)\}.
+ =\mathrm{span}\{(-1,\ldots,-1,1)\}.
 ```
 
 Thus every superoperator singular value is either zero or one.
@@ -412,7 +412,7 @@ Unitary pre- and post-processing act by Hilbert–Schmidt unitary matrices on th
 
 ```math
 \mathcal D_{\nu_C}
- =\operatorname{Ad}_V\circ\mathcal D_{\nu_L}\circ\operatorname{Ad}_W.
+ =\mathrm{Ad}_V\circ\mathcal D_{\nu_L}\circ\mathrm{Ad}_W.
 ```
 
 The distinction also appears in exact noiseless sectors. The linear channel preserves all coherences inside each coset of $`L^\perp`$, giving $`q`$-dimensional decoherence-free subspaces. For the cubic channel, the only fixed matrix units are the diagonal ones. Its equal asymptotic capacity is achieved through coding rather than such an exact noiseless sector.

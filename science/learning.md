@@ -23,7 +23,7 @@ a source branch with additive error $`e`$ and phase label $`z`$ transforms as
 Consequently a measurement returns
 
 ```math
-k\sim\operatorname{Unif}(\mathbb F_q),\qquad
+k\sim\mathrm{Unif}(\mathbb F_q),\qquad
 u=-ks-z,\qquad z\sim\nu,
 ```
 
@@ -130,7 +130,7 @@ A raw copy either has $`k=0`$ and supplies no row, or supplies a row. Its probab
 If the final feature matrix has column rank below $`D`$, some nonzero $`\lambda`$ lies in its right kernel. Independence of the raw copies and a union bound give
 
 ```math
-\Pr[\operatorname{rank}<D]
+\Pr[\mathrm{rank}<D]
 \le(q^D-1)\left(\frac3q\right)^N
 <q^D\left(\frac3q\right)^N.
 ```

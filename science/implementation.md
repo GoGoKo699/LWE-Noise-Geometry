@@ -32,7 +32,7 @@ Uniform classical field sampling uses the analogous rejection sampler. The error
 
 The dot product can be accumulated into the output register using controlled modular additions. For each binary bit of $`a_j`$, add the known constant $`2^t s_j\bmod q`$ when that bit is one. There are $`n\ell`$ such additions. Standard reversible adders and comparisons give polynomial cost, for example $`O(n\ell^2)`$ Boolean arithmetic gates with reusable workspace in a straightforward implementation. No operation queries an unknown function supplied to the learner.
 
-Cubing and summing the sampled phase labels takes $`O(n\,\operatorname{poly}(\ell))`$ classical work. For a known label $`z_j`$, the phase gate on a binary-encoded field element factors as
+Cubing and summing the sampled phase labels takes $`O(n\,\mathrm{poly}(\ell))`$ classical work. For a known label $`z_j`$, the phase gate on a binary-encoded field element factors as
 
 ```math
 Z_{z_j}|a_j\rangle
@@ -162,7 +162,7 @@ is sufficient for a rounded eigenvalue error at most $`\varepsilon_{\mathrm{phas
 The controlled additions and the binary inverse Fourier circuit cost
 
 ```math
-O\!\left(t\,\operatorname{poly}(\ell)+t^2\right)
+O\!\left(t\,\mathrm{poly}(\ell)+t^2\right)
 ```
 
 elementary arithmetic and controlled-rotation operations before finite-gate synthesis. The standard phase-estimation construction is described by [Cleve, Ekert, Macchiavello, and Mosca](https://arxiv.org/abs/quant-ph/9708016).
@@ -217,7 +217,7 @@ For each entire $`q`$-level input register, define the partial-dephasing channel
 
 ```math
 \Lambda_{p_j}^{(j)}
- =(1-p_j)\operatorname{id}_{A_j}+p_j\Delta_j,
+ =(1-p_j)\mathrm{id}_{A_j}+p_j\Delta_j,
 \qquad
 0\le p_j\le1,
 \qquad
@@ -241,9 +241,9 @@ This is a channel identity and remains valid with any reference system.
 
 ```math
 \widehat\nu(\delta)
- =\mathbb E_{z_{\operatorname{supp}\delta}}
-    \omega^{z_{\operatorname{supp}\delta}\cdot
-             \delta_{\operatorname{supp}\delta}}
+ =\mathbb E_{z_{\mathrm{supp}\,\delta}}
+    \omega^{z_{\mathrm{supp}\,\delta}\cdot
+             \delta_{\mathrm{supp}\,\delta}}
  =0.
 ```
 
@@ -251,11 +251,11 @@ Every nonzero surviving offdiagonal difference consequently changes all $`n`$ in
 
 One completely dephased input register makes $`\eta=0`$ and destroys all remaining input coherence, even though the other registers are untouched.
 
-The channel has a standard continuous-time realization. The commuting generators $`\mathcal L_j=\gamma_j(\Delta_j-\operatorname{id})`$ give
+The channel has a standard continuous-time realization. The commuting generators $`\mathcal L_j=\gamma_j(\Delta_j-\mathrm{id})`$ give
 
 ```math
 e^{t\mathcal L_j}
- =e^{-\gamma_jt}\operatorname{id}
+ =e^{-\gamma_jt}\mathrm{id}
   +(1-e^{-\gamma_jt})\Delta_j,
 \qquad
 \eta=e^{-t\sum_j\gamma_j}.
@@ -287,15 +287,15 @@ unitary invariance and the common eigenbasis of $`\tau_\nu`$ and $`I/d`$ give
 
 ```math
 D(\sigma_s^{\nu,\eta},\rho_s^{\mathrm{cl}})
- =\eta\operatorname{TV}(\nu,U),
+ =\eta\mathrm{TV}(\nu,U),
 \qquad
-U=\operatorname{Unif}(\mathbb F_q^n).
+U=\mathrm{Unif}(\mathbb F_q^n).
 ```
 
 For either uniform graph law,
 
 ```math
-\operatorname{TV}(\nu,U)=1-\frac1q,
+\mathrm{TV}(\nu,U)=1-\frac1q,
 \qquad
 D(\sigma_s^{\nu,\eta},\rho_s^{\mathrm{cl}})
  =\eta\left(1-\frac1q\right).
@@ -404,7 +404,7 @@ The distance between the two complete channels also contracts exactly:
 \frac12\|\mathcal D_{\nu_{L,\eta}}
            -\mathcal D_{\nu_{C,\eta}}\|_\diamond
  =
-\eta\,\operatorname{TV}(\nu_L,\nu_C).
+\eta\,\mathrm{TV}(\nu_L,\nu_C).
 ```
 
 ## 7. Perturbative success and the regime not settled here

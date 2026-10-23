@@ -40,7 +40,7 @@ It acts on $`A`$ only. The learner receives independent copies of
 
 ```math
 \rho_s^\nu
-=(\mathcal D_\nu\otimes\operatorname{Id}_B)
+=(\mathcal D_\nu\otimes\mathrm{Id}_B)
 \left(\sum_e\chi(e)|\psi_{s,e}\rangle\langle\psi_{s,e}|\right).
 ```
 
@@ -103,7 +103,7 @@ N=\left\lceil
 This is $`O(n+\log(1/\delta))`$ uniformly for the allowed primes. The algorithm is independent of the error law $`\chi`$ and requires no collective quantum memory. Its polynomial-time proof is in [Learning](learning.md).
 
 4. **Exact fragility.** Apply independent computational-dephasing mixtures
-   $`\Lambda_{p_j}=(1-p_j)\operatorname{Id}+p_j\Delta_j`$
+   $`\Lambda_{p_j}=(1-p_j)\mathrm{Id}+p_j\Delta_j`$
    to the input registers after either correlated channel. With
    $`\eta=\prod_j(1-p_j)`$, the resulting source is exactly
 
@@ -127,7 +127,7 @@ The relevance of LWE to worst-case lattice problems is an established reduction,
 
 ## A useful factorization
 
-Let $`|+\rangle=q^{-n/2}\sum_a|a\rangle`$, let $`\operatorname{diag}\chi=\sum_e\chi(e)|e\rangle\langle e|`$, and define
+Let $`|+\rangle=q^{-n/2}\sum_a|a\rangle`$, let $`\mathrm{diag}\,\chi=\sum_e\chi(e)|e\rangle\langle e|`$, and define
 
 ```math
 U_s|a,b\rangle=|a,b+a\cdot s\rangle,\qquad
@@ -137,7 +137,7 @@ U_s|a,b\rangle=|a,b+a\cdot s\rangle,\qquad
 The diagonal phase operations commute with $`U_s`$, so
 
 ```math
-\rho_s^\nu=U_s(\tau_\nu\otimes\operatorname{diag}\chi)U_s^\dagger.
+\rho_s^\nu=U_s(\tau_\nu\otimes\mathrm{diag}\,\chi)U_s^\dagger.
 ```
 
 The vectors $`Z_z|+\rangle`$ form an orthonormal Fourier basis. This immediately exposes the source spectrum and isolates the encoded information from the noise spectrum. It also explains why a known equivalence before encoding need not give a known conversion after the secret-dependent encoding.
