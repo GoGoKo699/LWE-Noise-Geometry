@@ -185,9 +185,9 @@ Use the $`3n`$ features
 
 ```math
 g(u',k)=
-(u_i^3)_{i<n}\ \oplus
-(3ku_i^2)_{i<n}\ \oplus
-(3k^2u_i)_{i<n}\ \oplus
+(u_i^3)_{i=1}^{n-1}\oplus
+(3ku_i^2)_{i=1}^{n-1}\oplus
+(3k^2u_i)_{i=1}^{n-1}\oplus
 (k^3,-k,-1)
 ```
 
@@ -195,9 +195,9 @@ and unknown vector
 
 ```math
 \vartheta=
-(c_i)_{i<n}\ \oplus
-(c_i s_i)_{i<n}\ \oplus
-(c_i s_i^2)_{i<n}\ \oplus
+(c_i)_{i=1}^{n-1}\oplus
+(c_i s_i)_{i=1}^{n-1}\oplus
+(c_i s_i^2)_{i=1}^{n-1}\oplus
 \left(\sum_i c_i s_i^3,s_n,d_0\right).
 ```
 
