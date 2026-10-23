@@ -25,3 +25,7 @@ The project asks whether matching local noise action and major scalar channel di
 | Which identities can be checked on finite instances? | [Verification](../verification/README.md) |
 
 The mathematical proofs are authoritative for general parameters. Numerical checks cover stated finite cases; they do not prove the cryptographic assumption or establish priority.
+
+## Build the prerequisites
+
+The [learning guide](../learning/README.md) connects this account to a [30-milestone map](../learning/MILESTONES.md) and the [Watrous bridge](../learning/WATROUS_BRIDGE.md). The bridge introduces the channel language and finite-field calculations used here; each milestone points back to the canonical scientific statement or proof.

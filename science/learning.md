@@ -6,7 +6,7 @@ The [source model](model.md) fixes the information supplied to the learner. The 
 
 ## Fourier readout
 
-Let $`q>3`$ be prime, $`n\ge2`$, and $`\omega=e^{2\pi i/q}`$. With the positive Fourier convention
+Let $`q\gt 3`$ be prime, $`n\ge2`$, and $`\omega=e^{2\pi i/q}`$. With the positive Fourier convention
 
 ```math
 F_q|j\rangle=\frac1{\sqrt q}\sum_{k\in\mathbb F_q}\omega^{jk}|k\rangle,
@@ -23,7 +23,7 @@ a source branch with additive error $`e`$ and phase label $`z`$ transforms as
 Consequently a measurement returns
 
 ```math
-k\sim\operatorname{Unif}(\mathbb F_q),\qquad
+k\sim\mathrm{Unif}(\mathbb F_q),\qquad
 u=-ks-z,\qquad z\sim\nu,
 ```
 
@@ -40,7 +40,7 @@ C=\left\{(x_1,\ldots,x_{n-1},\sum_{i=1}^{n-1}x_i^3)
 :x_i\in\mathbb F_q\right\}.
 ```
 
-For any fixed secret $`s\in\mathbb F_q^n`$, any additive error law $`\chi`$, and any $`0<\delta<1`$, the algorithm below recovers $`s`$ with probability at least $`1-\delta`$ using exactly
+For any fixed secret $`s\in\mathbb F_q^n`$, any additive error law $`\chi`$, and any $`0\lt \delta\lt 1`$, the algorithm below recovers $`s`$ with probability at least $`1-\delta`$ using exactly
 
 ```math
 N=\left\lceil
@@ -50,7 +50,7 @@ N=\left\lceil
 
 raw source copies. Copies whose measured $`k`$ is zero are included in this budget. Quantum and classical running times are polynomial in $`n`$, $`\log q`$, and $`\log(1/\delta)`$, with the finite-precision allowance stated below. The learner needs no coherent memory across copies, source inverse, or QRAM.
 
-The condition $`q\equiv2\pmod3`$ ensures the matched local marginals of the channel construction. The recovery calculation and its rank proof themselves only require a prime $`q>3`$.
+The condition $`q\equiv2\pmod3`$ ensures the matched local marginals of the channel construction. The recovery calculation and its rank proof themselves only require a prime $`q\gt 3`$.
 
 ### The exact polynomial relation
 
@@ -130,9 +130,9 @@ A raw copy either has $`k=0`$ and supplies no row, or supplies a row. Its probab
 If the final feature matrix has column rank below $`D`$, some nonzero $`\lambda`$ lies in its right kernel. Independence of the raw copies and a union bound give
 
 ```math
-\Pr[\operatorname{rank}<D]
+\Pr[\mathrm{rank}\lt D]
 \le(q^D-1)\left(\frac3q\right)^N
-<q^D\left(\frac3q\right)^N.
+\lt q^D\left(\frac3q\right)^N.
 ```
 
 The stated choice of $`N`$ makes the last quantity at most $`\delta`$. Because $`q\ge5`$, the denominator $`\ln(q/3)`$ is positive. Moreover,
@@ -185,9 +185,9 @@ Use the $`3n`$ features
 
 ```math
 g(u',k)=
-(u_i^3)_{i<n}\ \oplus
-(3ku_i^2)_{i<n}\ \oplus
-(3k^2u_i)_{i<n}\ \oplus
+(u_i^3)_{i=1}^{n-1}\oplus
+(3ku_i^2)_{i=1}^{n-1}\oplus
+(3k^2u_i)_{i=1}^{n-1}\oplus
 (k^3,-k,-1)
 ```
 
@@ -195,15 +195,15 @@ and unknown vector
 
 ```math
 \vartheta=
-(c_i)_{i<n}\ \oplus
-(c_i s_i)_{i<n}\ \oplus
-(c_i s_i^2)_{i<n}\ \oplus
+(c_i)_{i=1}^{n-1}\oplus
+(c_i s_i)_{i=1}^{n-1}\oplus
+(c_i s_i^2)_{i=1}^{n-1}\oplus
 \left(\sum_i c_i s_i^3,s_n,d_0\right).
 ```
 
 The response is simply $`u_n`$. The variables $`u'`$ and $`k`$ are independent and uniform on the full grid $`\mathbb F_q^{n-1}\times\mathbb F_q`$. A nonzero linear combination of the distinct features is a nonzero polynomial of total degree at most three, so it vanishes with probability at most $`3/q`$. The same union-bound proof, now with $`D=3n`$, establishes the stated budget.
 
-The recovered nonzero coefficients give $`s_i=(c_i s_i)/c_i`$ for $`i<n`$, and the lifted vector directly gives $`s_n`$ and $`d_0`$. All other recovered entries can be checked for consistency. This proves the extension without an additional source interface or a separate calibration oracle.
+The recovered nonzero coefficients give $`s_i=(c_i s_i)/c_i`$ for $`i\lt n`$, and the lifted vector directly gives $`s_n`$ and $`d_0`$. All other recovered entries can be checked for consistency. This proves the extension without an additional source interface or a separate calibration oracle.
 
 This result concerns fixed unknown coefficients and a fixed offset. It does not cover coefficients fluctuating between calls, independently varying branch errors, or arbitrary phase jitter.
 

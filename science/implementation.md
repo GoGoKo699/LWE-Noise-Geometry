@@ -8,7 +8,7 @@ This page separates finite gate-synthesis accuracy from that additional physical
 
 ## 1. Source preparation without a data-loading oracle
 
-Use the conventions of [model.md](model.md): $`q>3`$ is prime, $`q\equiv2\pmod3`$, $`n\ge2`$, $`r=n-1`$, and $`\ell=\lceil\log_2q\rceil`$. A field element occupies the valid subspace $`\{|0\rangle,\ldots,|q-1\rangle\}`$ of an $`\ell`$-qubit register. Arithmetic circuits can be extended reversibly to the remaining binary basis states.
+Use the conventions of [model.md](model.md): $`q\gt 3`$ is prime, $`q\equiv2\pmod3`$, $`n\ge2`$, $`r=n-1`$, and $`\ell=\lceil\log_2q\rceil`$. A field element occupies the valid subspace $`\{|0\rangle,\ldots,|q-1\rangle\}`$ of an $`\ell`$-qubit register. Arithmetic circuits can be extended reversibly to the remaining binary basis states.
 
 The source holder knows $`s`$. For each fresh copy:
 
@@ -22,7 +22,7 @@ Steps 3 and 4 commute. Fresh randomness is used for each emitted copy. The outpu
 
 ### Uniform field states
 
-Uniform state preparation does not require a Fourier transform of arbitrary modulus. Prepare $`H^{\otimes\ell}|0^\ell\rangle`$, reversibly compare the resulting integer with $`q`$, and measure only the comparison flag. Conditional on acceptance, the register is exactly $`|+_q\rangle`$ in the ideal finite gate model. The acceptance probability is $`q/2^\ell>1/2`$.
+Uniform state preparation does not require a Fourier transform of arbitrary modulus. Prepare $`H^{\otimes\ell}|0^\ell\rangle`$, reversibly compare the resulting integer with $`q`$, and measure only the comparison flag. Conditional on acceptance, the register is exactly $`|+_q\rangle`$ in the ideal finite gate model. The acceptance probability is $`q/2^\ell\gt 1/2`$.
 
 A rejected register can be reset and retried independently. Expected work is fewer than two attempts per site. With at most $`R`$ attempts per site, the probability that any of the $`n`$ preparations aborts is at most $`n2^{-R}`$. Choosing $`R=\lceil\log_2(n/\varepsilon_{\mathrm{abort}})\rceil`$ gives a fixed polynomial budget and an explicit abort probability. These acceptance events occur before the secret encoder and do not depend on the secret.
 
@@ -32,7 +32,7 @@ Uniform classical field sampling uses the analogous rejection sampler. The error
 
 The dot product can be accumulated into the output register using controlled modular additions. For each binary bit of $`a_j`$, add the known constant $`2^t s_j\bmod q`$ when that bit is one. There are $`n\ell`$ such additions. Standard reversible adders and comparisons give polynomial cost, for example $`O(n\ell^2)`$ Boolean arithmetic gates with reusable workspace in a straightforward implementation. No operation queries an unknown function supplied to the learner.
 
-Cubing and summing the sampled phase labels takes $`O(n\,\operatorname{poly}(\ell))`$ classical work. For a known label $`z_j`$, the phase gate on a binary-encoded field element factors as
+Cubing and summing the sampled phase labels takes $`O(n\,\mathrm{poly}(\ell))`$ classical work. For a known label $`z_j`$, the phase gate on a binary-encoded field element factors as
 
 ```math
 Z_{z_j}|a_j\rangle
@@ -105,7 +105,7 @@ The displayed Hamiltonian also specifies its scale:
 ```math
 \|H_f\|
  \le\frac{4\pi r(q-1)^2}{qt_0}
- <\frac{4\pi rq}{t_0}.
+ \lt \frac{4\pi rq}{t_0}.
 ```
 
 Thus a fixed interaction time allows total strength growing polynomially with $`n`$ and $`q`$. Bounding the individual interaction strength instead requires the corresponding increase in duration. Since cubing permutes the field, $`f(X_j)`$ has the same eigenvalue set as $`X_j`$; their correlation with the other bath coupling differs.
@@ -162,7 +162,7 @@ is sufficient for a rounded eigenvalue error at most $`\varepsilon_{\mathrm{phas
 The controlled additions and the binary inverse Fourier circuit cost
 
 ```math
-O\!\left(t\,\operatorname{poly}(\ell)+t^2\right)
+O\!\left(t\,\mathrm{poly}(\ell)+t^2\right)
 ```
 
 elementary arithmetic and controlled-rotation operations before finite-gate synthesis. The standard phase-estimation construction is described by [Cleve, Ekert, Macchiavello, and Mosca](https://arxiv.org/abs/quant-ph/9708016).
@@ -217,7 +217,7 @@ For each entire $`q`$-level input register, define the partial-dephasing channel
 
 ```math
 \Lambda_{p_j}^{(j)}
- =(1-p_j)\operatorname{id}_{A_j}+p_j\Delta_j,
+ =(1-p_j)\mathrm{id}_{A_j}+p_j\Delta_j,
 \qquad
 0\le p_j\le1,
 \qquad
@@ -241,9 +241,9 @@ This is a channel identity and remains valid with any reference system.
 
 ```math
 \widehat\nu(\delta)
- =\mathbb E_{z_{\operatorname{supp}\delta}}
-    \omega^{z_{\operatorname{supp}\delta}\cdot
-             \delta_{\operatorname{supp}\delta}}
+ =\mathbb E_{z_{\mathrm{supp}\,\delta}}
+    \omega^{z_{\mathrm{supp}\,\delta}\cdot
+             \delta_{\mathrm{supp}\,\delta}}
  =0.
 ```
 
@@ -251,11 +251,11 @@ Every nonzero surviving offdiagonal difference consequently changes all $`n`$ in
 
 One completely dephased input register makes $`\eta=0`$ and destroys all remaining input coherence, even though the other registers are untouched.
 
-The channel has a standard continuous-time realization. The commuting generators $`\mathcal L_j=\gamma_j(\Delta_j-\operatorname{id})`$ give
+The channel has a standard continuous-time realization. The commuting generators $`\mathcal L_j=\gamma_j(\Delta_j-\mathrm{id})`$ give
 
 ```math
 e^{t\mathcal L_j}
- =e^{-\gamma_jt}\operatorname{id}
+ =e^{-\gamma_jt}\mathrm{id}
   +(1-e^{-\gamma_jt})\Delta_j,
 \qquad
 \eta=e^{-t\sum_j\gamma_j}.
@@ -287,15 +287,15 @@ unitary invariance and the common eigenbasis of $`\tau_\nu`$ and $`I/d`$ give
 
 ```math
 D(\sigma_s^{\nu,\eta},\rho_s^{\mathrm{cl}})
- =\eta\operatorname{TV}(\nu,U),
+ =\eta\mathrm{TV}(\nu,U),
 \qquad
-U=\operatorname{Unif}(\mathbb F_q^n).
+U=\mathrm{Unif}(\mathbb F_q^n).
 ```
 
 For either uniform graph law,
 
 ```math
-\operatorname{TV}(\nu,U)=1-\frac1q,
+\mathrm{TV}(\nu,U)=1-\frac1q,
 \qquad
 D(\sigma_s^{\nu,\eta},\rho_s^{\mathrm{cl}})
  =\eta\left(1-\frac1q\right).
@@ -336,7 +336,7 @@ with $`p_j=1`$ giving zero immediately. For equal strengths $`p_j=p`$,
 \eta=(1-p)^n\le e^{-np}.
 ```
 
-Every constant $`p>0`$ gives exponential decay. More generally, $`np/\ln n\to\infty`$ is sufficient.
+Every constant $`p\gt 0`$ gives exponential decay. More generally, $`np/\ln n\to\infty`$ is sufficient.
 
 This is an exact fragility result for a specified family of local channels. It does not infer hardness merely because noisy regression resembles LWE; it supplies a simulator and a trace-distance reduction.
 
@@ -396,7 +396,7 @@ Q(\mathcal D_{\nu_\eta})
 \end{aligned}
 ```
 
-For polynomially bounded $`q`$ and constant $`p>0`$, both quantum capacity and source coherence therefore decay exponentially with $`n`$. This describes the particular dephasing trajectory, not a statement that the ideal channels have vanishing capacity.
+For polynomially bounded $`q`$ and constant $`p\gt 0`$, both quantum capacity and source coherence therefore decay exponentially with $`n`$. This describes the particular dephasing trajectory, not a statement that the ideal channels have vanishing capacity.
 
 The distance between the two complete channels also contracts exactly:
 
@@ -404,7 +404,7 @@ The distance between the two complete channels also contracts exactly:
 \frac12\|\mathcal D_{\nu_{L,\eta}}
            -\mathcal D_{\nu_{C,\eta}}\|_\diamond
  =
-\eta\,\operatorname{TV}(\nu_L,\nu_C).
+\eta\,\mathrm{TV}(\nu_L,\nu_C).
 ```
 
 ## 7. Perturbative success and the regime not settled here
