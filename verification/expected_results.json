@@ -1,0 +1,290 @@
+{
+  "checks_passed": true,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "tolerance": 1e-10,
+  "density_cases": [
+    {
+      "q": 5,
+      "n": 2,
+      "secret": [
+        1,
+        3
+      ],
+      "chi": [
+        0.06666666666666667,
+        0.13333333333333333,
+        0.2,
+        0.26666666666666666,
+        0.3333333333333333
+      ],
+      "proper_noise_marginals_uniform": true,
+      "coherence_bits": {
+        "linear": 2.3219280948873626,
+        "cubic": 2.3219280948873626
+      },
+      "phase_law_total_variation": 0.4,
+      "numeric_errors": {
+        "linear_source_spectrum": 5.551115123125783e-17,
+        "linear_choi_spectrum": 1.3877787807814457e-16,
+        "linear_coherence": 4.440892098500626e-16,
+        "linear_fourier_distribution": 2.0816681711721685e-17,
+        "cubic_source_spectrum": 5.551115123125783e-17,
+        "cubic_choi_spectrum": 1.1102230246251565e-16,
+        "cubic_coherence": 4.440892098500626e-16,
+        "cubic_fourier_distribution": 2.0816681711721685e-17,
+        "same_diagonal": 1.4802973661668758e-19,
+        "source_marginal_omit_0": 1.1716418363960945e-18,
+        "source_marginal_omit_1": 1.0685993281736128e-18,
+        "hard_source_simulation": 3.4705699158661886e-18,
+        "linear_dephasing_0_channel_identity": 1.4383206380687885e-17,
+        "linear_dephasing_0_source_identity": 8.673617379884035e-19,
+        "linear_dephasing_0_trace_distance": 0.0,
+        "linear_dephasing_0_capacity_formula": 2.220446049250313e-16,
+        "cubic_dephasing_0_channel_identity": 1.443605885506588e-17,
+        "cubic_dephasing_0_source_identity": 8.673617379884035e-19,
+        "cubic_dephasing_0_trace_distance": 0.0,
+        "cubic_dephasing_0_capacity_formula": 2.220446049250313e-16,
+        "linear_dephasing_1_channel_identity": 3.4160115154133734e-17,
+        "linear_dephasing_1_source_identity": 4.554682020551165e-19,
+        "linear_dephasing_1_trace_distance": 1.1102230246251565e-16,
+        "linear_dephasing_1_capacity_formula": 4.440892098500626e-16,
+        "cubic_dephasing_1_channel_identity": 3.4160115154133734e-17,
+        "cubic_dephasing_1_source_identity": 4.554682020551165e-19,
+        "cubic_dephasing_1_trace_distance": 5.551115123125783e-17,
+        "cubic_dephasing_1_capacity_formula": 4.440892098500626e-16,
+        "linear_dephasing_2_channel_identity": 8.989503987929929e-17,
+        "linear_dephasing_2_source_identity": 1.1986005317239907e-18,
+        "linear_dephasing_2_trace_distance": 3.933253528572154e-17,
+        "linear_dephasing_2_capacity_formula": 2.220446049250313e-16,
+        "cubic_dephasing_2_channel_identity": 9.022536784416176e-17,
+        "cubic_dephasing_2_source_identity": 1.2030049045888236e-18,
+        "cubic_dephasing_2_trace_distance": 3.381326691983933e-17,
+        "cubic_dephasing_2_capacity_formula": 2.220446049250313e-16,
+        "linear_superoperator_idempotent": 8.989503987929927e-17
+      }
+    },
+    {
+      "q": 5,
+      "n": 3,
+      "secret": [
+        1,
+        3,
+        0
+      ],
+      "chi": [
+        0.06666666666666667,
+        0.13333333333333333,
+        0.2,
+        0.26666666666666666,
+        0.3333333333333333
+      ],
+      "proper_noise_marginals_uniform": true,
+      "coherence_bits": {
+        "linear": 2.3219280948873626,
+        "cubic": 2.3219280948873635
+      },
+      "phase_law_total_variation": 0.56,
+      "numeric_errors": {
+        "linear_source_spectrum": 3.122502256758253e-17,
+        "linear_choi_spectrum": 4.163336342344337e-17,
+        "linear_coherence": 4.440892098500626e-16,
+        "linear_fourier_distribution": 2.0816681711721685e-17,
+        "cubic_source_spectrum": 3.469446951953614e-17,
+        "cubic_choi_spectrum": 3.469446951953614e-17,
+        "cubic_coherence": 1.3322676295501878e-15,
+        "cubic_fourier_distribution": 1.734723475976807e-17,
+        "same_diagonal": 4.336808689942018e-19,
+        "source_marginal_omit_0": 1.7347335814440594e-18,
+        "source_marginal_omit_1": 1.7347638974926133e-18,
+        "source_marginal_omit_2": 3.469446951953614e-18,
+        "hard_source_simulation": 4.344151459595573e-19,
+        "linear_dephasing_0_channel_identity": 4.092818477673335e-17,
+        "linear_dephasing_0_source_identity": 1.0914182607128894e-19,
+        "linear_dephasing_0_trace_distance": 5.551115123125783e-17,
+        "linear_dephasing_0_capacity_formula": 4.440892098500626e-16,
+        "cubic_dephasing_0_channel_identity": 2.220446049250313e-16,
+        "cubic_dephasing_0_source_identity": 1.0914182607128894e-19,
+        "cubic_dephasing_0_trace_distance": 1.6653345369377348e-16,
+        "cubic_dephasing_0_capacity_formula": 4.440892098500626e-16,
+        "linear_dephasing_1_channel_identity": 1.1102230246251565e-16,
+        "linear_dephasing_1_source_identity": 2.168404344971009e-19,
+        "linear_dephasing_1_trace_distance": 5.551115123125783e-17,
+        "linear_dephasing_1_capacity_formula": 8.881784197001252e-16,
+        "cubic_dephasing_1_channel_identity": 2.220446049250313e-16,
+        "cubic_dephasing_1_source_identity": 2.168404344971009e-19,
+        "cubic_dephasing_1_trace_distance": 1.1102230246251565e-16,
+        "cubic_dephasing_1_capacity_formula": 0.0,
+        "linear_dephasing_2_channel_identity": 1.4229162870031423e-16,
+        "linear_dephasing_2_source_identity": 3.7944434320083793e-19,
+        "linear_dephasing_2_trace_distance": 5.447407120915103e-17,
+        "linear_dephasing_2_capacity_formula": 6.661338147750939e-16,
+        "cubic_dephasing_2_channel_identity": 2.220446049250313e-16,
+        "cubic_dephasing_2_source_identity": 3.789590106423615e-19,
+        "cubic_dephasing_2_trace_distance": 5.0043228937883495e-17,
+        "cubic_dephasing_2_capacity_formula": 6.661338147750939e-16,
+        "linear_superoperator_idempotent": 1.4229162870031425e-16
+      }
+    }
+  ],
+  "exact_regression": [
+    {
+      "q": 5,
+      "n": 2,
+      "full_grid_rank": 4,
+      "all_secrets_recovered": 25
+    },
+    {
+      "q": 5,
+      "n": 3,
+      "full_grid_rank": 6,
+      "all_secrets_recovered": 125
+    }
+  ],
+  "fixed_unknown_coefficients": {
+    "q": 5,
+    "n": 2,
+    "full_grid_rank": 6,
+    "all_coefficient_offset_secret_combinations_recovered": 500
+  },
+  "raw_copy_trials": [
+    {
+      "q": 5,
+      "n": 2,
+      "delta": 0.01,
+      "raw_budget": 22,
+      "seeded_trials_passed": 20,
+      "discarded_k_zero_per_trial": [
+        3,
+        10,
+        6,
+        2,
+        3,
+        2,
+        4,
+        8,
+        2,
+        5,
+        6,
+        4,
+        1,
+        4,
+        5,
+        4,
+        4,
+        6,
+        4,
+        6
+      ]
+    },
+    {
+      "q": 5,
+      "n": 5,
+      "delta": 0.01,
+      "raw_budget": 41,
+      "seeded_trials_passed": 20,
+      "discarded_k_zero_per_trial": [
+        10,
+        10,
+        9,
+        10,
+        8,
+        4,
+        7,
+        11,
+        6,
+        9,
+        6,
+        12,
+        12,
+        10,
+        7,
+        10,
+        3,
+        10,
+        8,
+        5
+      ]
+    },
+    {
+      "q": 11,
+      "n": 4,
+      "delta": 0.01,
+      "raw_budget": 19,
+      "seeded_trials_passed": 20,
+      "discarded_k_zero_per_trial": [
+        1,
+        0,
+        1,
+        0,
+        2,
+        3,
+        6,
+        3,
+        5,
+        1,
+        2,
+        1,
+        1,
+        0,
+        0,
+        2,
+        1,
+        2,
+        5,
+        4
+      ]
+    }
+  ],
+  "information_counterexamples": {
+    "q": 5,
+    "n": 2,
+    "ensemble_rows": [
+      {
+        "chi": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "holevo_bits": {
+          "linear": 3.7881130944889017,
+          "cubic": 3.713729014891633
+        }
+      },
+      {
+        "chi": [
+          0.5,
+          0.25,
+          0.0,
+          0.0,
+          0.25
+        ],
+        "holevo_bits": {
+          "linear": 2.557930866013146,
+          "cubic": 2.5716568431465645
+        }
+      },
+      {
+        "chi": [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        "holevo_bits": {
+          "linear": 1.8575424759098906,
+          "cubic": 1.8575424759098906
+        }
+      }
+    ],
+    "fourier_mutual_information_bits": {
+      "linear": 1.857542475909888,
+      "cubic": 1.857542475909888
+    }
+  }
+}

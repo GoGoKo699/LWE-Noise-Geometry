@@ -1,0 +1,44 @@
+# LWE Noise Geometry
+
+This repository develops an explicit comparison of correlated phase-noise channels for a coherent LWE source. Its main result is conditional computational separation despite matching proper input marginals, per-secret source and normalized Choi spectra, coherence, and quantum capacity. Its exact independent-dephasing identity quantifies the fragility of that separation.
+
+## Authoritative files
+
+- README.md: principal results, scope, and reading routes.
+- science/README.md: connected guide to the scientific account.
+- science/model.md: common notation, emitted source, access contract, and main theorem.
+- science/channels.md: marginal identities, source/Choi spectra, scalar diagnostics, capacity, channel discrimination, and superoperator distinctions.
+- science/hardness.md: exact rank-r equivalence to classical-input LWE, specializing to dimension n-1.
+- science/learning.md: positive-Fourier readout, cubic regression, fixed raw-copy bound, and fixed unknown coefficients.
+- science/implementation.md: source and readout circuits, resource costs, accuracy budgets, independent-dephasing identity, and n-LWE simulator.
+- science/interpretation.md: information versus computation, Holevo counterexamples, source conversions, and physical meaning.
+- references/RELATED_WORK.md: attribution, precise source-model comparisons, version notes, and unresolved full-text coverage.
+- references/references.bib: structured primary bibliography.
+- verification/README.md: commands, coverage, expected results, and limits.
+- verification/verify.py: executable finite mathematical checks.
+- verification/expected_results.json: recorded finite output with runtime versions.
+
+## Reading routes
+
+Scientific story: model -> interpretation -> channels.
+Theorem audit: model -> channels -> hardness -> learning -> implementation.
+Study foundations: model definitions and access contract -> channel representations -> Fourier relation -> exact LWE simulator.
+Reproduction: verification/README.md -> verify.py -> expected_results.json -> the corresponding scientific proof.
+Literature comparison: references/RELATED_WORK.md before making any priority statement.
+
+## Distinctions to preserve
+
+1. The source holder knows the secret; the learner receives only independent quantum copies. There is one fresh scalar error per emission, shared across that emission's coherent branches.
+2. Ordinary classical LWE samples, public keys, chosen-input oracles, independently noisy branches, and coherent error-amplitude samples are different interfaces. Do not replace one with another.
+3. The ideal linear branch is exactly equivalent to (n-1)-dimensional classical-input LWE. The additional-dephasing simulator invokes n-dimensional LWE.
+4. Hardness is conditional. Identities, reductions, and the cubic algorithm are proved without a hardness assumption.
+5. Every proper subset of noisy input registers has the same reduced channel. This does not mean every proper subset of all n+1 source registers.
+6. Equal conditional-state spectra do not imply equal ensemble Holevo information. The single-copy mutual information of the specified Fourier readout is exactly equal.
+7. Quantum capacity is per entire n-register channel invocation with independent invocations. It is not the complexity of learning from the prescribed source.
+8. Choi spectra match; superoperator spectra do not. Product probes and Fourier measurements can distinguish the channels by jointly processing outcomes.
+9. A known local unitary relates pre-encoding phase states. Moving it through the unknown-secret encoder requires a secret-dependent operation.
+10. The local-dephasing formula concerns each entire logical q-level input register. Do not silently identify it with arbitrary physical-qubit noise.
+11. Fixed unknown cubic coefficients can be learned. Fresh random perturbations are a different model. No constant-noise-tolerant cubic decoder is proved.
+12. Finite checks are not proofs of general parameters, LWE hardness, novelty, or experimental feasibility.
+
+Keep scientific claims in their topic pages, with one authoritative proof. Preserve access limits and primary attribution when summarizing. Do not infer a new attack on deployed lattice-based cryptography from the coherent-source theorem.
