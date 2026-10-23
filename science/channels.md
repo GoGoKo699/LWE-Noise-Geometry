@@ -6,7 +6,7 @@ The computational consequences are established separately by the [LWE reduction]
 
 ## 1. Definitions and conventions
 
-Let $`q>3`$ be prime with $`q\equiv2\pmod3`$, let $`n\ge2`$, and set $`r=n-1`$ and $`d=q^n`$. All logarithms in entropies and capacities are base two. Write
+Let $`q\gt 3`$ be prime with $`q\equiv2\pmod3`$, let $`n\ge2`$, and set $`r=n-1`$ and $`d=q^n`$. All logarithms in entropies and capacities are base two. Write
 
 ```math
 \omega=e^{2\pi i/q},\qquad
@@ -398,7 +398,7 @@ For $`C`$, no nonzero $`\delta`$ has $`|\widehat\nu_C(\delta)|=1`$. Equality in 
 \sum_{j=1}^{r}\delta_jx_j+\delta_n\sum_{j=1}^{r}x_j^3
 ```
 
-to be constant for every $`x`$. Its value at zero is zero. Varying one coordinate at a time gives a degree-at-most-three polynomial vanishing on all $`q>3`$ field elements, so its coefficients vanish: $`\delta_n=0`$ and every $`\delta_j=0`$.
+to be constant for every $`x`$. Its value at zero is zero. Varying one coordinate at a time gives a degree-at-most-three polynomial vanishing on all $`q\gt 3`$ field elements, so its coefficients vanish: $`\delta_n=0`$ and every $`\delta_j=0`$.
 
 On the other hand, Parseval gives
 

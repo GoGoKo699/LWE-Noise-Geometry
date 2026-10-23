@@ -214,7 +214,7 @@ Watrous supplies the quantum-information framework. Classical-input LWE, finite-
 
 **Central question.** How can two different global phase laws agree on every proper input subsystem?
 
-**Understanding target.** The phase labels are uniform on either $`L=\{(x,\sum_i x_i)\}`$ or $`C=\{(x,\sum_i x_i^3)\}`$. The conditions $`q>3`$ and $`q\equiv2\pmod3`$ make cubing bijective. Each projection onto $`n-1`$ coordinates is therefore bijective, giving uniform proper marginals. Tensor-product phase gates turn this combinatorial property into an equality of reduced channels, including arbitrary reference systems and arbitrary global inputs.
+**Understanding target.** The phase labels are uniform on either $`L=\{(x,\sum_i x_i)\}`$ or $`C=\{(x,\sum_i x_i^3)\}`$. The conditions $`q\gt 3`$ and $`q\equiv2\pmod3`$ make cubing bijective. Each projection onto $`n-1`$ coordinates is therefore bijective, giving uniform proper marginals. Tensor-product phase gates turn this combinatorial property into an equality of reduced channels, including arbitrary reference systems and arbitrary global inputs.
 
 **Dependencies and story role.** M03, M06, M13, and M14 supply the subsystem, phase, graph, and access language. This milestone introduces the actual pair and establishes the local match before any global summary or computational distinction is used.
 
@@ -270,7 +270,7 @@ Watrous supplies the quantum-information framework. Classical-input LWE, finite-
 
 **Central question.** Why can no unrestricted collective learner bypass the hard branch merely by using its remaining coherence?
 
-**Understanding target.** Once the complementary secret is known, a fresh source copy gives an exact classical $`r`$-dimensional LWE sample and a known uniform fiber. Conversely, one classical residual-LWE sample plus a chosen known complementary secret prepares one exact quantum source copy. The simulator preserves the uniform full-secret distribution and uses one classical sample per emitted copy. The selected linear graph leaves $`\kappa=s_n-\sum_{i<n}s_i`$ accessible and exactly $`(n-1)`$-dimensional LWE unresolved.
+**Understanding target.** Once the complementary secret is known, a fresh source copy gives an exact classical $`r`$-dimensional LWE sample and a known uniform fiber. Conversely, one classical residual-LWE sample plus a chosen known complementary secret prepares one exact quantum source copy. The simulator preserves the uniform full-secret distribution and uses one classical sample per emitted copy. The selected linear graph leaves $`\kappa=s_n-\sum_{i\lt n}s_i`$ accessible and exactly $`(n-1)`$-dimensional LWE unresolved.
 
 **Dependencies and story role.** M07 fixes the classical-input assumption and M18 gives the fiber decomposition. This milestone completes the hard-side argument as a source simulation, rather than a lower bound limited to one measurement.
 

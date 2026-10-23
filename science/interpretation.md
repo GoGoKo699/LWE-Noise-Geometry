@@ -77,7 +77,7 @@ This is an information-theoretic separation in the uniform-error limit. Uniform 
 
 ### Narrow errors can make the hard branch identifiable
 
-Suppose $`\chi`$ is supported on a proper set $`E\subset\mathbb F_q`$ with $`p=|E|/q<1`$. After the linear reduction, consider a wrong residual secret $`u'\ne u`$ in dimension $`r=n-1`$. For a fresh uniform $`x`$, its predicted residual
+Suppose $`\chi`$ is supported on a proper set $`E\subset\mathbb F_q`$ with $`p=|E|/q\lt 1`$. After the linear reduction, consider a wrong residual secret $`u'\ne u`$ in dimension $`r=n-1`$. For a fresh uniform $`x`$, its predicted residual
 
 ```math
 c-x\cdot u'=e+x\cdot(u-u')

@@ -92,7 +92,7 @@ For the source and distributions just defined, the following statements hold.
 
 2. **Hard branch.** Learning $`s`$ from copies of $`\rho_s^{\nu_L}`$ is polynomially equivalent to recovering a uniform secret from ordinary classical-input $`(n-1)`$-dimensional LWE with the same $`q,\chi`$. One additional secret coordinate combination is directly accessible. The reduction holds against arbitrary collective quantum processing of source copies; it does not restrict the learner to the Fourier measurement. See [Hardness](hardness.md).
 
-3. **Easy branch.** A product Fourier measurement followed by classical modular linear algebra recovers every $`s`$ from copies of $`\rho_s^{\nu_C}`$ with failure probability at most $`\delta`$, for any $`0<\delta<1`$. A sufficient fixed raw-copy budget is
+3. **Easy branch.** A product Fourier measurement followed by classical modular linear algebra recovers every $`s`$ from copies of $`\rho_s^{\nu_C}`$ with failure probability at most $`\delta`$, for any $`0\lt \delta\lt 1`$. A sufficient fixed raw-copy budget is
 
 ```math
 N=\left\lceil
@@ -115,7 +115,7 @@ This is $`O(n+\log(1/\delta))`$ uniformly for the allowed primes. The algorithm 
 =q^{-n}\sum_{a,e}\chi(e)|a,a\cdot s+e\rangle\langle a,a\cdot s+e|.
 ```
 
-Its trace distance from the classical source is exactly $`\eta(1-1/q)`$. For $`m`$ independent copies, the distance is at most $`m\eta(1-1/q)`$. A common fixed rate $`p>0`$, or heterogeneous rates bounded below by such a constant, makes polynomially many copies exponentially close to classical **$`n`$-dimensional** LWE. Under the corresponding quantum-hardness assumption, efficient recovery is then impossible with nonnegligible success. The channel identity and reduction are proved in [Implementation and perturbations](implementation.md).
+Its trace distance from the classical source is exactly $`\eta(1-1/q)`$. For $`m`$ independent copies, the distance is at most $`m\eta(1-1/q)`$. A common fixed rate $`p\gt 0`$, or heterogeneous rates bounded below by such a constant, makes polynomially many copies exponentially close to classical **$`n`$-dimensional** LWE. Under the corresponding quantum-hardness assumption, efficient recovery is then impossible with nonnegligible success. The channel identity and reduction are proved in [Implementation and perturbations](implementation.md).
 
 The diagnostic identities, exact reductions, copy bound, and dephasing identity are unconditional mathematical results. All **computational-hardness conclusions**, including the hard/easy separation and the noisy-source consequence, are conditional on their specified classical-input LWE assumptions. No unconditional exponential lower bound is asserted.
 

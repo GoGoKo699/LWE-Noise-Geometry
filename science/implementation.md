@@ -8,7 +8,7 @@ This page separates finite gate-synthesis accuracy from that additional physical
 
 ## 1. Source preparation without a data-loading oracle
 
-Use the conventions of [model.md](model.md): $`q>3`$ is prime, $`q\equiv2\pmod3`$, $`n\ge2`$, $`r=n-1`$, and $`\ell=\lceil\log_2q\rceil`$. A field element occupies the valid subspace $`\{|0\rangle,\ldots,|q-1\rangle\}`$ of an $`\ell`$-qubit register. Arithmetic circuits can be extended reversibly to the remaining binary basis states.
+Use the conventions of [model.md](model.md): $`q\gt 3`$ is prime, $`q\equiv2\pmod3`$, $`n\ge2`$, $`r=n-1`$, and $`\ell=\lceil\log_2q\rceil`$. A field element occupies the valid subspace $`\{|0\rangle,\ldots,|q-1\rangle\}`$ of an $`\ell`$-qubit register. Arithmetic circuits can be extended reversibly to the remaining binary basis states.
 
 The source holder knows $`s`$. For each fresh copy:
 
@@ -22,7 +22,7 @@ Steps 3 and 4 commute. Fresh randomness is used for each emitted copy. The outpu
 
 ### Uniform field states
 
-Uniform state preparation does not require a Fourier transform of arbitrary modulus. Prepare $`H^{\otimes\ell}|0^\ell\rangle`$, reversibly compare the resulting integer with $`q`$, and measure only the comparison flag. Conditional on acceptance, the register is exactly $`|+_q\rangle`$ in the ideal finite gate model. The acceptance probability is $`q/2^\ell>1/2`$.
+Uniform state preparation does not require a Fourier transform of arbitrary modulus. Prepare $`H^{\otimes\ell}|0^\ell\rangle`$, reversibly compare the resulting integer with $`q`$, and measure only the comparison flag. Conditional on acceptance, the register is exactly $`|+_q\rangle`$ in the ideal finite gate model. The acceptance probability is $`q/2^\ell\gt 1/2`$.
 
 A rejected register can be reset and retried independently. Expected work is fewer than two attempts per site. With at most $`R`$ attempts per site, the probability that any of the $`n`$ preparations aborts is at most $`n2^{-R}`$. Choosing $`R=\lceil\log_2(n/\varepsilon_{\mathrm{abort}})\rceil`$ gives a fixed polynomial budget and an explicit abort probability. These acceptance events occur before the secret encoder and do not depend on the secret.
 
@@ -105,7 +105,7 @@ The displayed Hamiltonian also specifies its scale:
 ```math
 \|H_f\|
  \le\frac{4\pi r(q-1)^2}{qt_0}
- <\frac{4\pi rq}{t_0}.
+ \lt \frac{4\pi rq}{t_0}.
 ```
 
 Thus a fixed interaction time allows total strength growing polynomially with $`n`$ and $`q`$. Bounding the individual interaction strength instead requires the corresponding increase in duration. Since cubing permutes the field, $`f(X_j)`$ has the same eigenvalue set as $`X_j`$; their correlation with the other bath coupling differs.
@@ -336,7 +336,7 @@ with $`p_j=1`$ giving zero immediately. For equal strengths $`p_j=p`$,
 \eta=(1-p)^n\le e^{-np}.
 ```
 
-Every constant $`p>0`$ gives exponential decay. More generally, $`np/\ln n\to\infty`$ is sufficient.
+Every constant $`p\gt 0`$ gives exponential decay. More generally, $`np/\ln n\to\infty`$ is sufficient.
 
 This is an exact fragility result for a specified family of local channels. It does not infer hardness merely because noisy regression resembles LWE; it supplies a simulator and a trace-distance reduction.
 
@@ -396,7 +396,7 @@ Q(\mathcal D_{\nu_\eta})
 \end{aligned}
 ```
 
-For polynomially bounded $`q`$ and constant $`p>0`$, both quantum capacity and source coherence therefore decay exponentially with $`n`$. This describes the particular dephasing trajectory, not a statement that the ideal channels have vanishing capacity.
+For polynomially bounded $`q`$ and constant $`p\gt 0`$, both quantum capacity and source coherence therefore decay exponentially with $`n`$. This describes the particular dephasing trajectory, not a statement that the ideal channels have vanishing capacity.
 
 The distance between the two complete channels also contracts exactly:
 

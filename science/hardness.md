@@ -135,7 +135,7 @@ L=\left\{(z_1,\ldots,z_{n-1},\sum_{i=1}^{n-1}z_i)
 Its dimension is $`n-1`$, and its orthogonal complement is spanned by $`(-1,\ldots,-1,1)`$. The canonical coordinates have an especially simple form:
 
 ```math
-x_i=a_i+a_n\quad(1\le i<n),\qquad y=a_n,
+x_i=a_i+a_n\quad(1\le i\lt n),\qquad y=a_n,
 ```
 
 so that
@@ -154,7 +154,7 @@ The source reveals $`\kappa`$ through the coherent fiber. Subtracting $`\kappa y
 |x_1-y,\ldots,x_{n-1}-y,y\rangle|c+\kappa y\rangle.
 ```
 
-The full secret has $`s_n=\kappa+\sum_{i<n}s_i`$. This is the exact $`(n-1)`$-dimensional LWE reduction used by the principal separation; it changes neither the modulus nor the error distribution.
+The full secret has $`s_n=\kappa+\sum_{i\lt n}s_i`$. This is the exact $`(n-1)`$-dimensional LWE reduction used by the principal separation; it changes neither the modulus nor the error distribution.
 
 ## A fixed unknown record can be identified
 
@@ -173,7 +173,7 @@ With $`m=r+t`$ differences, the probability that they fail to span $`W`$ is boun
 ```math
 \Pr[\text{incomplete span}]
 \le\sum_{j=0}^{r-1}q^{j-m}
-<\frac{q^{-t}}{q-1}.
+\lt \frac{q^{-t}}{q-1}.
 ```
 
 If $`r`$ is unknown, use $`m=n+t`$. Gaussian elimination then identifies $`W`$ and the representative $`s_0=w_0\in s+W`$. For a basis matrix $`C`$ of $`W`$, write $`s=s_0+C\tau`$. Computational-basis samples satisfy
@@ -186,9 +186,9 @@ Because $`C^{\mathsf T}`$ has rank $`r`$, its image of uniform $`a`$ is uniform 
 
 ## An asymptotic lattice regime
 
-The algebraic reductions hold for every prime $`q`$ and every $`\chi`$. The cubic comparison additionally uses $`q>3`$ and $`q\equiv2\pmod3`$. To interpret the linear family as a lattice-hard family, select parameters satisfying a stated LWE hardness assumption rather than keeping $`q`$ fixed in an asymptotic lattice claim.
+The algebraic reductions hold for every prime $`q`$ and every $`\chi`$. The cubic comparison additionally uses $`q\gt 3`$ and $`q\equiv2\pmod3`$. To interpret the linear family as a lattice-hard family, select parameters satisfying a stated LWE hardness assumption rather than keeping $`q`$ fixed in an asymptotic lattice claim.
 
-For example, consider admissible primes $`q=\Theta(n^2)`$ and Regev's rounded Gaussian law $`\overline\Psi_\alpha`$ with $`\alpha=1/n`$. At residual dimension $`r=n-1`$, the condition $`\alpha q>2\sqrt r`$ holds for sufficiently large $`n`$. Regev's theorem then connects efficient LWE recovery to worst-case quantum lattice approximation within $`\widetilde O(r/\alpha)=\widetilde O(n^2)`$. This gives a concrete polynomial-parameter regime for the conditional comparison. It does not establish a numerical security level or recommend cryptosystem parameters. See [Regev's theorem and definitions](https://cims.nyu.edu/~regev/papers/qcrypto.pdf).
+For example, consider admissible primes $`q=\Theta(n^2)`$ and Regev's rounded Gaussian law $`\overline\Psi_\alpha`$ with $`\alpha=1/n`$. At residual dimension $`r=n-1`$, the condition $`\alpha q\gt 2\sqrt r`$ holds for sufficiently large $`n`$. Regev's theorem then connects efficient LWE recovery to worst-case quantum lattice approximation within $`\widetilde O(r/\alpha)=\widetilde O(n^2)`$. This gives a concrete polynomial-parameter regime for the conditional comparison. It does not establish a numerical security level or recommend cryptosystem parameters. See [Regev's theorem and definitions](https://cims.nyu.edu/~regev/papers/qcrypto.pdf).
 
 The small fields used in [verification](../verification/README.md) check finite algebra and density operators. They do not test asymptotic LWE hardness.
 
