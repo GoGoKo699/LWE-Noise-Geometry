@@ -8,7 +8,7 @@ The linear and cubic channels are distinct, and their prescribed coherent LWE so
 \boxed{\Gamma_L=\Gamma_C=49.}
 ```
 
-The complete proof and construction belong to [Quantum Memory Circuit Cutting, correlated phase memory](https://github.com/GoGoKo699/Quantum-Memory-Circuit-Cutting/blob/306d063ce1583e0df77444217e7db06461ba1915/science/correlated-phase-memory.md). That account supplies the strict causal cutting model, the spatial separability converse, the direct upper bound $`97-16\sqrt5`$, and the complete parity instrument improving it to 49. This page states the model and the mechanism needed to understand the consequence independently. The phase laws and their learning interpretation remain authoritative here in [model.md](model.md) and [channels.md](channels.md).
+The complete proof and construction belong to [Quantum Memory Circuit Cutting, correlated phase memory](https://github.com/GoGoKo699/Quantum-Memory-Circuit-Cutting/blob/1a2833df5bc07fad3de391847d6d6c48590d1c2e/science/correlated-phase-memory.md). That account supplies the strict causal cutting model, the spatial separability converse, the direct upper bound $`97-16\sqrt5`$, and the complete parity instrument improving it to 49. This page states the model and the mechanism needed to understand the consequence independently. The phase laws and their learning interpretation remain authoritative here in [model.md](model.md) and [channels.md](channels.md).
 
 ## 1. The same channels in a different task
 
@@ -41,14 +41,14 @@ This task supplies controlled resource preparation and accepts arbitrary incomin
 A normalized Bell-probe tester gives target Choi state $`\Phi_{25}=\Phi_5\otimes\Phi_5`$ across the spatial partition of Alice's two input references and Bob's two outputs. Every positive physical outcome Choi operator $`X`$ is spatially separable: local operations, classical communication and a mixture of product phase unitaries preserve that property. Hence
 
 ```math
-0\le\operatorname{Tr}(\Phi_{25}X)\le\frac{\operatorname{Tr}X}{25},
+0\le\mathrm{Tr}(\Phi_{25}X)\le\frac{\mathrm{Tr}X}{25},
 \qquad
 W=50\Phi_{25}-I_{625},
 \qquad
-|\operatorname{Tr}(WX)|\le\operatorname{Tr}X.
+|\mathrm{Tr}(WX)|\le\mathrm{Tr}X.
 ```
 
-Completeness gives $`\sum_h\operatorname{Tr}J(\mathcal C_h)=1`$. Bounded scores therefore give $`|\operatorname{Tr}WJ(\mathcal F)|\le1`$. Since the target evaluates to 49, both extents are at least 49. The argument includes arbitrary filtering and adaptive records. Expanding the hidden phase sum mathematically does not make the flag available to the protocol. The continuous witness also bounds operational limits of finite-round protocols.
+Completeness gives $`\sum_h\mathrm{Tr}J(\mathcal C_h)=1`$. Bounded scores therefore give $`|\mathrm{Tr}WJ(\mathcal F)|\le1`$. Since the target evaluates to 49, both extents are at least 49. The argument includes arbitrary filtering and adaptive records. Expanding the hidden phase sum mathematically does not make the flag available to the protocol. The continuous witness also bounds operational limits of finite-round protocols.
 
 The witness is the inherited spatial robustness argument; it is not a new LWE converse. The new issue is whether the actual correlated noisy memory can attain its bound with a complete instrument.
 
@@ -104,7 +104,7 @@ Both $`\rho_+`$ and $`\rho_-`$ are separable preparations, obtained by twirling 
 
 | Moment | Value |
 |---|---:|
-| $`\operatorname{Tr}F_{\mathrm{raw}}`$ | $`1/4`$ |
+| $`\mathrm{Tr}F_{\mathrm{raw}}`$ | $`1/4`$ |
 | First marginal Bell overlap | $`1/20`$ |
 | Second marginal Bell overlap | $`1/40`$ |
 | Joint Bell overlap | $`1/40`$ |
@@ -132,7 +132,7 @@ The resource calculation has a strict streaming implementation. The first resour
 
 First-port rotations and teleportation maps act on tensor factors disjoint from the memory noise and later decoder. Commuting those maps proves equality with the simultaneous resource calculation without moving a future input earlier or retaining a released output. Slotwise twirling makes the resource Bell diagonal; slotwise teleportation then converts its full operator identity into equality of the open process against arbitrary causal testers. Neither operation measures or conditions the score on the hidden phase draw.
 
-The earlier cubic upper bound $`97-16\sqrt5\approx61.2229`$ is valid but nonoptimal. The [complete proof](https://github.com/GoGoKo699/Quantum-Memory-Circuit-Cutting/blob/306d063ce1583e0df77444217e7db06461ba1915/science/correlated-phase-memory.md) certifies it directly with deterministic rank-two temporal cats and then gives the parity construction above. Restricting attention to deterministic normalized resources or invertible filters would miss the complete scored instrument attaining 49.
+The earlier cubic upper bound $`97-16\sqrt5\approx61.2229`$ is valid but nonoptimal. The [complete proof](https://github.com/GoGoKo699/Quantum-Memory-Circuit-Cutting/blob/1a2833df5bc07fad3de391847d6d6c48590d1c2e/science/correlated-phase-memory.md) certifies it directly with deterministic rank-two temporal cats and then gives the parity construction above. Restricting attention to deterministic normalized resources or invertible filters would miss the complete scored instrument attaining 49.
 
 ## 5. What transfers between the projects
 

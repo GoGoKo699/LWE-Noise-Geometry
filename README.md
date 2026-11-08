@@ -8,7 +8,7 @@ The hardness statement is conditional on quantum hardness of the specified class
 
 ## Relation to quantum memory circuit cutting
 
-The sister project [Quantum Memory Circuit Cutting](https://github.com/GoGoKo699/Quantum-Memory-Circuit-Cutting) asks how persistent noisy memory changes exact cutting cost. For the two-register phase laws at $`q=5`$, both channels have exact extent **49** for two ordered five-dimensional identity wires with one five-level memory per laboratory. A complete parity instrument attains the bound while keeping the phase flags inaccessible. Thus the channel and source-learning distinctions proved here do not imply a strict gap in that cutting statistic. See the self-contained [operational comparison](science/circuit-cutting.md) and the [authoritative proof](https://github.com/GoGoKo699/Quantum-Memory-Circuit-Cutting/blob/306d063ce1583e0df77444217e7db06461ba1915/science/correlated-phase-memory.md).
+The sister project [Quantum Memory Circuit Cutting](https://github.com/GoGoKo699/Quantum-Memory-Circuit-Cutting) asks how persistent noisy memory changes exact cutting cost. For the two-register phase laws at $`q=5`$, both channels have exact extent **49** for two ordered five-dimensional identity wires with one five-level memory per laboratory. A complete parity instrument attains the bound while keeping the phase flags inaccessible. Thus the channel and source-learning distinctions proved here do not imply a strict gap in that cutting statistic. See the self-contained [operational comparison](science/circuit-cutting.md) and the [authoritative proof](https://github.com/GoGoKo699/Quantum-Memory-Circuit-Cutting/blob/1a2833df5bc07fad3de391847d6d6c48590d1c2e/science/correlated-phase-memory.md).
 
 ## Principal results
 
@@ -64,7 +64,7 @@ The source then lies at trace distance exactly $`\eta(1-1/q)`$ from an ordinary 
 | Understand the scientific story | [Science guide](science/README.md) → [model and theorem](science/model.md) → [interpretation](science/interpretation.md) |
 | Build the foundations and follow the result | [Learning guide](learning/README.md) → [30 milestones](learning/MILESTONES.md) with the [Watrous bridge](learning/WATROUS_BRIDGE.md) |
 | Check the separation | [channel proofs](science/channels.md) → [LWE reduction](science/hardness.md) → [cubic learner](science/learning.md) |
-| Compare an exact operational cost | [Equal cutting extent at five levels](science/circuit-cutting.md) → [complete proof in the sister project](https://github.com/GoGoKo699/Quantum-Memory-Circuit-Cutting/blob/306d063ce1583e0df77444217e7db06461ba1915/science/correlated-phase-memory.md) |
+| Compare an exact operational cost | [Equal cutting extent at five levels](science/circuit-cutting.md) → [complete proof in the sister project](https://github.com/GoGoKo699/Quantum-Memory-Circuit-Cutting/blob/1a2833df5bc07fad3de391847d6d6c48590d1c2e/science/correlated-phase-memory.md) |
 | Assess physical assumptions | [source access](science/model.md#access-contract) → [implementation and perturbations](science/implementation.md) |
 | Compare with earlier work | [related work](references/RELATED_WORK.md) and [BibTeX bibliography](references/references.bib) |
 | Reproduce finite checks | [verification guide](verification/README.md) |
