@@ -10,6 +10,7 @@ The project asks whether matching local noise action and major scalar channel di
 4. [Learning](learning.md) derives the cubic learner and its finite raw-copy guarantee.
 5. [Implementation and perturbations](implementation.md) accounts for the physical source, computational resources, approximation error, and independent-dephasing fragility.
 6. [Interpretation](interpretation.md) explains information versus computation, the role of source access, and the limits of the comparison.
+7. [Equal cutting extent](circuit-cutting.md) compares the same two channels as joint five-level memory noise: a complete parity instrument gives exact extent 49 for both, while the learning comparison remains distinct.
 
 ## Follow a question
 
@@ -21,6 +22,7 @@ The project asks whether matching local noise action and major scalar channel di
 | How many actual emitted copies does the learner need? | [Learning](learning.md) |
 | What happens under independent noise on each input register? | [Implementation and perturbations](implementation.md) |
 | Is the single-copy information the same? | [Interpretation](interpretation.md#the-fourier-measurement-has-equal-single-copy-mutual-information) |
+| Does the channel distinction imply a strict cutting-cost gap? | [Equal cutting extent with complete instruments](circuit-cutting.md) |
 | What is inherited from earlier work? | [Related work](../references/RELATED_WORK.md) |
 | Which identities can be checked on finite instances? | [Verification](../verification/README.md) |
 

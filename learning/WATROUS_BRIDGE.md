@@ -14,6 +14,7 @@ The selected book is **John Watrous, *The Theory of Quantum Information*, Cambri
 | Recognize the phase channel in several forms | §§4.1.1–4.1.3; §4.2.2 | [Channel action](../science/channels.md): random unitaries, tensor Weyl covariance, entrywise multipliers | [M06](MILESTONES.md#m06), [M16–M17](MILESTONES.md#m16) |
 | Separate spectrum from information about the secret | §§5.1.1, 5.2.1–5.2.2; §5.3.3 | [Source entropy](../science/channels.md#3-source-spectra-entropy-and-coherence) and [ensemble distinctions](../science/interpretation.md) | [M08–M09](MILESTONES.md#m08), [M11](MILESTONES.md#m11), [M28](MILESTONES.md#m28) |
 | Interpret approximation operationally | §§3.1.1, 3.3.2–3.3.3 | [Complete-protocol error](../science/learning.md#cost-and-finite-precision) and channel discrimination | [M10](MILESTONES.md#m10), [M25](MILESTONES.md#m25), [M29](MILESTONES.md#m29) |
+| Compare cutting with learning | §§2.3.2, 6.1.1–6.1.2 and 6.3.1 | [Complete scored instruments and equal extent 49](../science/circuit-cutting.md); separability and streaming teleportation | [M29–M30](MILESTONES.md#m29) |
 | Understand the meaning of equal capacity | §§8.2.1–8.2.2 | [Dephasing capacity specialization](../science/channels.md#5-exact-quantum-capacity) | [M12](MILESTONES.md#m12), [M17](MILESTONES.md#m17) |
 
 For the last row, the definitions and theorem statement provide the needed orientation. The project's capacity proof then supplies the special degradability and symmetry argument. A first reading does not require reproducing the book's general coding-theorem proof.
@@ -215,6 +216,14 @@ Both graph laws retain only coherences involving both inputs. Adding dephasing m
 ```
 
 Fully dephasing either input makes $`\eta=0`$ and leaves the classical source. This is the two-register instance of [the exact fragility identity](../science/implementation.md#5-exact-effect-of-independent-local-dephasing), not a statement about arbitrary hardware noise. The general identity and its asymptotic implications are developed in [M26–M27](MILESTONES.md#m26).
+
+## The same five-level channels as noisy memories
+
+The [operational comparison](../science/circuit-cutting.md) reuses the two phase laws as the joint noise on Alice's and Bob's memories in a strict two-wire cutting task. Watrous §2.3.2 supplies instruments and their outcome probabilities; §§6.1.1–6.1.2 supply spatial separability and LOCC; §6.3.1 supplies teleportation. Those are the common prerequisites, rather than an identification of the task with the LWE source.
+
+At $`q=5`$, a reflection-parity decoder has two complete Kraus outcomes. Since $`x^3=\pm x`$, its even branch is unchanged and its odd branch changes only by a global sign. Scoring equal parity outcomes positively and unequal outcomes negatively gives a physical bounded-score atom that attains exact extent 49 for both channels. All four outcome pairs are charged. The actual branch weights cannot be replaced by normalized successful states. The two wire outputs meet their deadlines, and neither the hidden phase flag nor the future input is accessible early.
+
+This example connects [M05](MILESTONES.md#m05) and [M09](MILESTONES.md#m09) to [M29–M30](MILESTONES.md#m29): distinct maps can have equal optimal cost for one specified task. It does not convert a learning source or equate the channels. The complete parity proof is owned by Quantum Memory Circuit Cutting, as linked from the local comparison.
 
 ## Returning to the general theorem
 

@@ -12,6 +12,7 @@ From the repository root:
 python3 -m venv .venv
 .venv/bin/python -m pip install -r verification/requirements.txt
 OPENBLAS_NUM_THREADS=1 .venv/bin/python verification/verify.py
+OPENBLAS_NUM_THREADS=1 .venv/bin/python verification/circuit_cutting_checks.py
 ```
 
 To save a fresh report:
@@ -48,6 +49,14 @@ The script exits unsuccessfully if any check fails. A successful run prints JSON
 All modular calculations are exact. Dense numerical checks require absolute error below $`10^{-10}`$. They use a nonuniform error law with positive probabilities proportional to $`1,2,\ldots,q`$, unless the information-counterexample table specifies another law.
 
 The seeded trials are deterministic examples of the complete measurement-to-recovery pipeline, not a statistical proof of the copy bound. The bound itself follows from the product-grid polynomial argument in [learning.md](../science/learning.md#proof-of-the-copy-bound). The script uses exhaustive grids only for tiny finite instances; the actual learner never enumerates those grids.
+
+## Five-level cutting comparison
+
+The separate [circuit_cutting_checks.py](circuit_cutting_checks.py) constructs the actual hidden-error phase branches for both $`(x,x)`$ and $`(x,x^3)`$. It checks the two-outcome decoder completeness, all four physical parity-outcome probabilities, the four signed Bell moments, equality of the two scored resources and the full $`625\times625`$ twirled identity with coefficient extent 49. Its checks remain active under Python `-O`. A nonzero difference between the two channel multiplier matrices verifies that equality of this statistic has not been mistaken for equality of the channels.
+
+The recorded same-parity probability is $`5/8`$ and the cross-parity probability is $`3/8`$; every outcome is retained. The signed atom has trace $`1/4`$, not a freely normalized success state. The test also records the scope of the finite-field parity mechanism: $`x^3=\pm x`$ holds over $`\mathbb F_5`$ and need not hold at other allowed primes. The [local scientific account](../science/circuit-cutting.md) gives the model and the pinned route to the full proof. Timing, arbitrary causal testers, filtering-inclusive lower bounds and operational closure are established analytically rather than by finite matrix tests.
+
+To retain a fresh check report, pass `--output /tmp/lwe_circuit_cutting_results.json`.
 
 ## Interpreting a successful run
 
