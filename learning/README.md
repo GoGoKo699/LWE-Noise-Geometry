@@ -42,3 +42,8 @@ Matching per-secret spectra is not equality of the ensemble's Holevo information
 The [bridge](WATROUS_BRIDGE.md) contains a complete small example of the channel geometry and cubic recovery. It illustrates the algebra; the fixed raw-copy guarantee is proved in [Secret recovery](../science/learning.md).
 
 The [verification guide](../verification/README.md) documents executable finite checks, parameter cases, numerical tolerances, and stored results. These checks complement the proofs. They do not establish cryptographic hardness or priority.
+
+
+## Equal cost in a separate operational task
+
+The [five-level cutting comparison](../science/circuit-cutting.md) reuses the phase laws as joint memory noise rather than acting on a prescribed LWE source. A complete parity instrument gives exact extent 49 for both channels. It connects instrument probabilities and spatial separability to [M29–M30](MILESTONES.md#m29), without adding milestones or equating source learning with cutting. Watrous §§2.3.2, 6.1 and 6.3.1 provide the common prerequisites; the project-specific proof is owned by Quantum Memory Circuit Cutting.

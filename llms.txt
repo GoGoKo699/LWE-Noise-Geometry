@@ -12,6 +12,7 @@ This repository develops an explicit comparison of correlated phase-noise channe
 - science/learning.md: positive-Fourier readout, cubic regression, fixed raw-copy bound, and fixed unknown coefficients.
 - science/implementation.md: source and readout circuits, resource costs, accuracy budgets, independent-dephasing identity, and n-LWE simulator.
 - science/interpretation.md: information versus computation, Holevo counterexamples, source conversions, and physical meaning.
+- science/circuit-cutting.md: the same q=5 phase laws used as joint memory noise; exact equal extent 49 through a complete parity instrument, strict timing and inaccessible flags; pinned authoritative proof in Quantum-Memory-Circuit-Cutting.
 - learning/README.md: learner-independent reading route and connection between the book, milestones, and scientific account.
 - learning/MILESTONES.md: exactly 30 stable milestones, with M01–M14 for background/preliminaries and M15–M30 for narrative/innovation; each phase ends in synthesis.
 - learning/WATROUS_BRIDGE.md: the single educational anchor, Watrous's The Theory of Quantum Information (2018), with verified sections, notation translation, locally supplied LWE steps, and a complete small example.
@@ -19,6 +20,7 @@ This repository develops an explicit comparison of correlated phase-noise channe
 - references/references.bib: structured primary bibliography.
 - verification/README.md: commands, coverage, expected results, and limits.
 - verification/verify.py: executable finite mathematical checks.
+- verification/circuit_cutting_checks.py: actual linear/cubic noisy parity-branch contractions, complete instrument, full twirled extent-49 identity and operational-boundary checks.
 - verification/expected_results.json: recorded finite output with runtime versions.
 
 ## Reading routes
@@ -28,6 +30,7 @@ Theorem audit: model -> channels -> hardness -> learning -> implementation.
 Study: learning/README.md -> learning/MILESTONES.md in dependency order, using learning/WATROUS_BRIDGE.md for selected Watrous sections and notation -> linked science pages for authoritative claims and proofs.
 Reproduction: verification/README.md -> verify.py -> expected_results.json -> the corresponding scientific proof.
 Literature comparison: references/RELATED_WORK.md before making any priority statement.
+Operational comparison: science/circuit-cutting.md -> pinned proof in Quantum-Memory-Circuit-Cutting -> verification/circuit_cutting_checks.py.
 
 ## Distinctions to preserve
 
@@ -43,6 +46,7 @@ Literature comparison: references/RELATED_WORK.md before making any priority sta
 10. The local-dephasing formula concerns each entire logical q-level input register. Do not silently identify it with arbitrary physical-qubit noise.
 11. Fixed unknown cubic coefficients can be learned. Fresh random perturbations are a different model. No constant-noise-tolerant cubic decoder is proved.
 12. Finite checks are not proofs of general parameters, LWE hardness, novelty, or experimental feasibility.
+13. For the strict two-wire q=5 cutting task, both channels attain exact signed extent 49. The noise is the joint correlated phase law, not a product of dephasing marginals. Scores use accessible parity labels, all outcomes are charged, and neither hidden flags nor early second-input access is allowed. This equality is not a source-learning or capacity equivalence.
 
 Keep scientific claims in their topic pages, with one authoritative proof. Preserve access limits and primary attribution when summarizing. Do not infer a new attack on deployed lattice-based cryptography from the coherent-source theorem.
 

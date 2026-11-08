@@ -412,17 +412,17 @@ N=\left\lceil
 
 <a id="m29"></a>
 
-### M29 — What local equivalence and global discrimination imply
+### M29 — What channel distinctions imply for different tasks
 
-**Central question.** Why do neither a local pre-encoding unitary nor an easy channel-discrimination experiment erase the learning separation?
+**Central question.** Why do neither local state equivalence, easy channel discrimination, nor equal cutting extent erase the learning separation?
 
-**Understanding target.** A product Fourier-basis relabelling maps the two pre-encoding phase states into one another. Converting the received source by the displayed conjugation also requires the unknown $`U_s`$, so this identity does not give a public source conversion. Separately, product probes and Fourier measurements distinguish the complete phase channels with a constant advantage by processing all labels jointly. Their half-diamond distance is the total-variation distance of their phase laws.
+**Understanding target.** A product Fourier-basis relabelling maps the two pre-encoding phase states into one another. Converting the received source by the displayed conjugation also requires the unknown $`U_s`$, so this identity does not give a public source conversion. Separately, product probes and Fourier measurements distinguish the complete phase channels with a constant advantage by processing all labels jointly. Their half-diamond distance is the total-variation distance of their phase laws. In the separate two-wire task at $`q=5`$, both joint memory channels nevertheless have exact bounded-score cutting extent 49: a complete parity instrument uses $`x^3=\pm x`$ and retains every outcome. This construction has strict input/output deadlines and no accessible phase flags; normalizing a successful branch would change its cost.
 
 **Dependencies and story role.** M10, M15, M17, M19, and M28 distinguish channel distance, marginal equality, non-equivalent actions, computational simulation, and ensemble information. This milestone resolves two apparent shortcuts before the final synthesis.
 
 **Conceptual connection.** Knowing which public noise law is present is different from recovering the secret encoded beneath it. Proper-subsystem equality also supplies no general lower bound on tomography using product measurements and joint classical processing.
 
-**Sources.** [Watrous §§2.2.2, 3.3.1–3.3.2, and 4.2.2][watrous]; [secret-dependent conversion](../science/interpretation.md#a-local-equivalence-before-encoding-is-not-a-source-conversion); [complete channel distance](../science/channels.md#61-the-complete-channels-are-separated-in-diamond-norm); [global discrimination scope](../science/interpretation.md#local-invisibility-does-not-prevent-global-channel-discrimination).
+**Sources.** [Watrous §§2.2.2, 3.3.1–3.3.2, and 4.2.2][watrous]; [secret-dependent conversion](../science/interpretation.md#a-local-equivalence-before-encoding-is-not-a-source-conversion); [complete channel distance](../science/channels.md#61-the-complete-channels-are-separated-in-diamond-norm); [global discrimination scope](../science/interpretation.md#local-invisibility-does-not-prevent-global-channel-discrimination); [equal cutting extent and complete parity instrument](../science/circuit-cutting.md). Watrous §§2.3.2, 6.1 and 6.3.1 supply the instrument, separability and teleportation language for this comparison.
 
 <a id="m30"></a>
 
@@ -430,13 +430,13 @@ N=\left\lceil
 
 **Central question.** What complete conclusion is supported when the matched diagnostics, reductions, algorithm, and physical limits are assembled?
 
-**Understanding target.** The project compares two explicit, public, secret-independent correlated phase laws under one state-copy contract. Their stated local and scalar diagnostics match. The ideal linear source is exactly equivalent to residual classical-input LWE, while the cubic source has a finite-copy polynomial-time learner. The computational separation is conditional on the selected LWE family. Independent local dephasing has an exact classical-source limit, and the intervening recovery complexity is not fully classified.
+**Understanding target.** The project compares two explicit, public, secret-independent correlated phase laws under one state-copy contract. Their stated local and scalar diagnostics match. The ideal linear source is exactly equivalent to residual classical-input LWE, while the cubic source has a finite-copy polynomial-time learner. The computational separation is conditional on the selected LWE family. Independent local dephasing has an exact classical-source limit, and the intervening recovery complexity is not fully classified. Equal extent 49 in the separate five-level cutting task is compatible with this source-learning distinction; the supplied systems, controls, timing and objective differ.
 
 **Dependencies and story role.** M14 provides the initial pipeline; M15–M29 supply its complete scientific narrative. This final synthesis locates each conclusion at its proper level: unconditional identity, explicit algorithm, computational assumption, resource construction, numerical check, or unresolved comparison.
 
 **Conceptual connection.** The result limits what the specified collection of channel diagnostics predicts about one inference task. It establishes neither an ordinary public-key attack, a general equal-Holevo theorem, a constant-noise learner, nor an unqualified priority claim.
 
-**Sources.** [Watrous §§2.2, 3.3, 5.3.3, and 8.2][watrous]; [main theorem](../science/model.md#main-theorem); [scope](../science/interpretation.md#scope-of-the-contribution); [related-work coverage](../references/RELATED_WORK.md#9-version-and-coverage-notes); [finite verification](../verification/README.md). Canonical science pages remain the authoritative proofs.
+**Sources.** [Watrous §§2.2, 3.3, 5.3.3, and 8.2][watrous]; [main theorem](../science/model.md#main-theorem); [scope](../science/interpretation.md#scope-of-the-contribution); [related-work coverage](../references/RELATED_WORK.md#9-version-and-coverage-notes); [finite verification](../verification/README.md); [cutting-versus-learning boundary](../science/circuit-cutting.md#5-what-transfers-between-the-projects). Canonical science pages remain the authoritative proofs.
 
 [watrous]: https://jhwatrous.github.io/TQI.pdf
 [watrous-page]: https://jhwatrous.github.io/books-and-courses.html
